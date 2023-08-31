@@ -15,7 +15,7 @@ class MyServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
         """ Метод для обработки входящих GET-запросов """
-        query_components = parse_qs(urlparse(self.path).query)
+
         query_components = parse_qs(urlparse(self.path).query)
         with open("index.html", "r") as f:
             page_content = f.read()
